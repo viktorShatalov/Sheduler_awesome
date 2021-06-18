@@ -1,0 +1,115 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.lawyer {
+  &_info {
+    flex: 1;
+    // overflow: auto;
+    position: relative;
+    // display: flex;
+    max-width: 600px;
+
+    a {
+      transition: opacity .2s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &_avatar {
+    border-radius: 50%;
+    height: 74px;
+    width: 74px;
+    float: left;
+    flex: none;
+    overflow: hidden;
+    margin-right: 20px;
+  
+    * {
+      height: 100%;
+      width: 100%;
+    }
+  
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &_rating {
+    &_starts,
+    &_number {
+      display: inline-block;
+    }
+
+    &_number {
+      margin-left: 4px;
+      vertical-align: bottom;
+    }
+  }
+
+  &_name {
+    font-size: 20px;
+    line-height: 1.5em;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      white-space: nowrap;
+
+      @include media(">1280px") {
+        margin-right: 20px;
+      }
+    }
+
+    @include media(">1280px") {
+      align-items: center;
+    }
+
+    @include media("<=1280px") {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &_free {
+    @include media(">1280px") {
+      margin-left: auto;
+    }
+
+    @include media("<=1280px") {
+      margin-bottom: 12px;
+    }
+  }
+
+  &_details {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+
+    span {
+      white-space: nowrap;
+    }
+
+    *:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &_licensed {
+    margin-top: 12px;
+
+    svg {
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  &_ocupation {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

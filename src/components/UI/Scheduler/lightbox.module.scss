@@ -1,0 +1,371 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.container {
+  min-width: 760px;
+  // display: none;
+  @include media('<small') {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  @include media("<=tiny") {
+    // width: 100vw;
+    // height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  :global(.lazy-load-image-background) {
+    margin-right: 12px;
+    display: inline-block;
+    margin-top: -4px;
+    vertical-align: middle;
+  
+    .avatar {
+      opacity: 0;
+      margin-right: 0;
+    }
+  }
+  
+  :global(.lazy-load-image-background.lazy-load-image-loaded) {
+    margin-right: 12px;
+  
+    .avatar {
+      opacity: 1;
+    }
+  }
+}
+
+.inner {
+  // overflow: hidden;
+  @include media("<=tiny") {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    // overflow: auto;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  background-color: #FDDC03;
+
+  @include media(">tiny") {
+    border-radius: 20px 20px 0 0;
+    padding: 0 50px;
+    font-size: 24px;
+    height: 80px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 20px;
+    flex: none;
+    padding: 0 16px;
+    min-height: 60px;
+    padding-right: 60px;
+  }
+}
+
+.buttonClose {
+  position: absolute;
+  color: $white;
+  z-index: 2;
+
+  @include media(">tiny") {
+    right: -30px;
+    top: -30px;
+  }
+
+  @include media("<=tiny") {
+    right: 10px;
+    top: 12px;
+    border-radius: 50%;
+    background-color: $white;
+    color: $text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06);
+  }
+
+  svg {
+    font-size: 32px;
+
+    @include media("<=tiny") {
+      margin-left: 2px;
+    }
+  }
+
+  &:hover {
+    filter: brightness(150%);
+  }
+}
+
+.form {
+  background-color: $white;
+
+  @include media(">tiny") {
+    padding: 50px;
+    border-radius: 20px;
+  }
+
+  @include media("<=tiny") {
+    padding: 20px 16px;
+    flex: 1;
+  }
+}
+
+.input {
+  &_row {
+    position: relative;
+
+    @include media(">tiny") {
+      display: flex;
+      align-items: flex-start;
+      padding-bottom: 40px;
+    }
+  
+    @include media("<=tiny") {
+      padding-bottom: 32px;
+    }
+
+    & > .input_error {
+      bottom: 10px;
+    }
+  }
+
+  &_title {
+    font-size: 18px;
+    font-weight: bold;
+
+    @include media(">tiny") {
+      width: 150px;
+    }
+  
+    @include media("<=tiny") {
+      padding-bottom: 16px;
+    }
+  }
+
+  &_wrap {
+    position: relative;
+    line-height: 1.5em;
+
+    @include media(">tiny") {
+      flex: 1;
+    }
+    @include media("<=tiny") {
+      input {
+        width: 100%;
+      }
+    }
+
+    label {
+      display: block;
+    }
+  }
+
+  &_input {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $border;
+    transition: border .2s;
+
+    @include media(">tiny") {
+      width: 425px;
+    }
+  
+    @include media("<=tiny") {
+      // padding-bottom: 12px;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $primary;
+    }
+  }
+
+  &_selectGroup {
+    display: flex;
+
+    @include media("<=tiny") {
+      flex-wrap: wrap;
+    }
+    
+    &:not(:last-child) {
+      padding-bottom: 28px;
+    }
+
+    & > span {
+      width: 45px;
+      margin-right: 20px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    :global(.lazy-load-image-background) + span {
+      align-self: center;
+      flex: 1;
+      text-align: left;
+    }
+  }
+
+  &_selectItem {
+    &:not(:last-child) {
+      @include media(">tiny") {
+        margin-right: 20px;
+      }
+  
+      @include media("<=tiny") {
+        margin-right: 12px;
+      }
+    }
+
+    & > div {
+      & > button {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &_error {
+    position: absolute;
+    bottom: -20px;
+    color: $error;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.selectEvent {
+  max-width: 425px;
+}
+
+.checkbox {
+  display: block;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  } 
+
+  :global(.icon-wrap) {
+    @include media(">tiny") {
+      margin-right: 8px;
+    }
+
+    @include media("<=tiny") {
+      margin-left: 8px;
+      margin-right:8px;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.selectTime {
+  @include media(">tiny") {
+    flex: 0 0 90px;
+    max-width: 90px;
+  }
+
+  @include media("<=tiny") {
+    flex: 0 0 90px;
+    max-width: 90px;
+  }
+}
+
+.selectDay {
+  @include media(">tiny") {
+    flex: 0 0 60px;
+    max-width: 60px;
+  }
+
+  @include media("<=tiny") {
+    flex: 0 0 36px;
+    max-width: 36px;
+  }
+}
+
+.selectMonth {
+  @include media(">tiny") {
+    flex: 0 0 150px;
+    max-width: 150px;
+  }
+
+  @include media("<=tiny") {
+    flex: 1;
+    // max-width: 104px;
+  }
+}
+
+.selectYear {
+  @include media(">tiny") {
+    flex: 0 0 80px;
+    max-width: 80px;
+  }
+
+  @include media("<=tiny") {
+    // padding-top: 20px;
+    flex: 0 0 56px;
+    max-width: 56px;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.formFooter {
+  @include media(">tiny") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include media("<=tiny") {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  :global(.iOS) & {
+    @include media("<=tiny") {
+      padding-bottom: 30px;
+    }
+  }
+
+  :global(.esq-warning) {
+    transition: all .2s;
+
+    @include media("<=tiny") {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+
+  :global(.esq-btn--outline) {
+    min-width: 120px;
+  }
+}
+
+.timeZone {
+  margin-top: 12px;
+}
+
+.rating {
+  margin-left: auto;
+}

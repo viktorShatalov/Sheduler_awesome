@@ -1,0 +1,44 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.container {
+  text-align: center;
+
+  @include media("<=tiny") {
+    padding: 20px 0;
+  }
+
+  @include media(">tiny") {
+    padding: 20px;
+  }
+}
+
+.pagination {
+  display: inline-flex;
+}
+
+.prev,
+.next,
+.li {
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.activeLink {
+  color: $primary;
+  // font-weight: bold;
+}
+
+.breakMe {
+  padding: 5px 20px;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

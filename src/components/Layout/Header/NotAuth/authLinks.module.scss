@@ -1,0 +1,139 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.auth {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  :global(.specific-state) & {
+    justify-content: flex-end;
+    pointer-events: auto;
+  }
+
+  &_btn {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: opacity .2s;
+
+    @include media('>tiny') {
+      font-size: 16px;
+      margin: 0 10px;
+    }
+
+    @include media('<=tiny') {
+      font-size: 14px;
+      // margin: 0 5px;
+
+      &:first-child {
+        text-align: left;
+        margin-right: 20px;
+      }
+    }
+
+    :global(.specific-state) & {
+      color: $white;
+    }
+
+    &.delimiter {
+      position: relative;
+      padding-right: 30px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 5px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $text;
+      }
+    }
+
+    svg {
+      margin-left: 10px;
+      transform: translate3d(0,0,0);
+      transition: all .2s;
+    }
+
+    &_open {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  &_nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    // width: 260px;
+    // width: 100%;
+    min-width: max-content;
+    padding:4px 16px;
+    background: #FFFFFF;
+    border: 1px solid #F8F9FA;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+
+    &_item {
+      padding: 10px 0;
+      white-space: nowrap;
+
+      @include media(">tiny") {
+        display: flex;
+      }
+
+      :global(.specific-state) & {
+        display: flex !important;
+      }
+
+      p:first-child {
+        @include media(">tiny") {
+          flex: 0 0 88px;
+          margin-right: 20px;
+        }
+
+        @include media("<=tiny") {
+          margin-bottom: 20px;
+          font-size: 20px;
+        }
+
+        :global(.specific-state) & {
+          font-size: 16px !important;
+          flex: 0 0 88px !important;
+          margin-right: 20px !important;
+          margin-bottom: 0 !important;
+        }
+      }
+
+      a + a {
+        margin-left: 20px;
+      }
+
+      & + .auth_nav_item {
+        @include media(">tiny") {
+          border-top: 1px solid $border;
+        }
+
+        @include media("<=tiny") {
+          margin-top: 40px;
+        }
+
+        :global(.specific-state) & {
+          border-top: 1px solid $border !important;
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+
+  &_inner {
+
+  }
+}

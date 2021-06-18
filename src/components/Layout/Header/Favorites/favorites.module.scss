@@ -1,0 +1,58 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.container {
+  color: #1B1D1E;
+}
+
+.empty {
+  width: 30px;
+
+  .icon {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    right: -10px;
+    height: 30px;
+  }
+}
+
+.popup {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 120px;
+  background: #FFFFFF;
+  border: 1px solid #F8F9FA;
+  box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  width: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+
+  padding: 14px;
+  z-index: 4;
+
+  & > a {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}

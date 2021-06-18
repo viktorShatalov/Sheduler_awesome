@@ -1,0 +1,109 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.item {
+  position: relative;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid $utility;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+  
+  &:hover {
+    background-color: $utility;
+
+    .cancel {
+      display: flex;
+    }
+  }
+}
+
+.cancel {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 38px;
+  background-color: #EBEBEB;
+  border-radius: 10px 0 10px 0;
+}
+
+.user {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+    .user {
+      font-size: 14px;
+    }
+
+    .event {
+      margin-top: 3px;
+    }
+  }
+
+  .rating {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+  }
+}
+
+.title {
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.date {
+  font-size: 14px;
+  padding-bottom: 16px;
+  text-transform: lowercase;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.event {
+  margin-left: auto;
+  font-size: 12px;
+  color: $info;
+
+  &_inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &_icon {
+
+  }
+}

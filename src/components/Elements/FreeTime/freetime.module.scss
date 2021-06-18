@@ -1,0 +1,25 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.container {
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.block {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 4px 3px;
+  margin-right: 4px;
+  // line-height: 16px;
+  border-radius: 4px;
+  background-color: $brand;
+  
+  span {
+    position: relative;
+    line-height: 1;
+    top: 2px;
+    margin-left: 2px;
+  }
+}

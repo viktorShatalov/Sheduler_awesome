@@ -1,0 +1,129 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+$paddLinks: 12px;
+
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  @include media(">tiny") {
+    padding-top: 40px;
+  }
+
+  @include media("<=tiny") {
+    padding-top: 16px;
+  }
+}
+
+// .nav {
+//   @include media(">small") {
+//     justify-content: flex-end;
+//     display: flex;
+
+//     align-items: center;
+//   }
+// }
+
+.navInner {
+  @include media(">small") {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: -30px - #{$paddLinks};
+    width: auto;
+  }
+
+  @include media("<=small") {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -#{$paddLinks};
+    width: auto;
+  }
+}
+
+.navItem {
+  @include media(">small") {
+    margin: 0 30px;
+  }
+
+  &,
+  * {
+    color: $white
+  }
+
+  a {
+    pointer-events: auto;
+    padding: 0 $paddLinks;
+
+    &:hover {
+      opacity: 0.95;
+    }
+  }
+}
+
+.auth {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: auto;
+
+  &_btn {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: $white;
+
+    svg {
+      margin-left: 10px;
+      transition: all .2s;
+    }
+
+    &_open {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &_nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 260px;
+    width: max-content;
+    padding:4px 16px;
+    background: #FFFFFF;
+    border: 1px solid #F8F9FA;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+
+    &_item {
+      display: flex;
+      padding: 10px 0;
+      white-space: nowrap;
+
+      p:first-child {
+        flex: 0 0 88px;
+        margin-right: 20px;
+      }
+
+      a + a {
+        margin-left: 20px;
+      }
+
+      & + .auth_nav_item {
+        border-top: 1px solid $border;
+      }
+    }
+  }
+
+  &_inner {
+
+  }
+}

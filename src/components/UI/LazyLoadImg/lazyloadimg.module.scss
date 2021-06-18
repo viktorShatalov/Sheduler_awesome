@@ -1,0 +1,23 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.wrap {
+  display: inline-block;
+
+  .img {
+    transition: opacity .3s;
+  }
+
+  :global(.lazy-load-image-background) {
+    .img {
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+  
+  :global(.lazy-load-image-background.lazy-load-image-loaded) {
+    .img{
+      opacity: 1;
+    }
+  }
+}

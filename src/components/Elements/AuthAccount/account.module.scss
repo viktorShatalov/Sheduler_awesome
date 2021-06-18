@@ -1,0 +1,112 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include media(">small") {
+    min-width: 700px;
+  }
+
+  @include media("<=small") {
+    
+  }
+}
+
+.avatar {
+  line-height: 1;
+  font-size: 0;
+
+  @include media(">tiny") {
+    margin-right: 16px;
+    width: 100px;
+    height: 100px;
+  }
+
+  @include media("<=tiny") {
+    margin-right: 8px;
+    width: 66px;
+    height: 66px;
+  }
+}
+
+.textData {
+  @include media("<=tiny") {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
+.name {
+  font-weight: bold;
+  padding-bottom: 8px;
+  line-height: 1;
+
+  @include media(">tiny") {
+    font-size: 30px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 18px;
+  }
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+
+  @include media("<=tiny") {
+    font-size: 12px;
+  }
+
+  svg {
+    flex: none;
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  span {
+    margin-top: 4px;
+  }
+}
+
+.email {
+  display: flex;
+  align-items: center;
+
+  & > svg {
+    margin-top: -2px;
+    flex: none;
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  & > span {
+  }
+
+  @include media("<=tiny") {
+    font-size: 12px;
+  }
+}
+
+.btn {
+  @include media(">tiny") {
+    padding-left: 20px;
+    margin-left: auto;
+  }
+
+  @include media("<=tiny") {
+    padding-top: 20px;
+    flex: 0 0 100%;
+    text-align: center;
+
+    :global(.esq-btn) {
+      width: auto;
+    }
+  }
+}

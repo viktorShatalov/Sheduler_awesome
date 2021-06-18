@@ -1,0 +1,18 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.container {
+  @include media(">large") {
+    padding: 50px;
+  }
+
+  @include media(">tiny", "<=large") {
+    padding: 20px 0;
+  }
+
+  :global(.esq-wrap) {
+    @include media("<=tiny") {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,189 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.container {
+  height: 100%;
+}
+
+.remote {
+  height: 100%;
+}
+
+.video {
+  display: block;
+  background-color: #000;
+  height: 100%;
+  transform: translate3d(0,0,0);
+
+  @include media(">=1024px") {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  @include media("<1024px") {
+    min-height: 400px;
+  }
+
+  &_disconected {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    color: $white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+}
+
+.info {
+  font-weight: 600;
+
+  @include media(">large") {
+    font-size: 24px;
+    padding: 30px;
+  }
+
+  @include media(">tiny","<=large") {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  @include media(">tiny") {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.69) 0%, rgba(0, 0, 0, 0) 28.53%);
+    color: $white;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include media("<=tiny") {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px $gapMobile;
+    color: #FFFFFF;
+    font-size: 12px;
+  }
+
+  & > * {
+    font: inherit
+  }
+
+
+  &_title {
+    @include media(">tiny") {
+      max-width: 600px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    @include media("<=tiny") {
+      padding-bottom: 12px;
+      line-height: 1.25em;
+    }
+  }
+
+  &_time {
+  }
+}
+
+.controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align:center;
+  z-index: 4;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control {
+  &_btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 8px;
+
+    svg {
+      height: 22px;
+      width: 22px;
+    }
+  }
+
+  &_disabled {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      bottom: 5px;
+      transform: rotate(45deg);
+      border-left: 1px solid $text;
+    }
+  }
+}
+
+.mute {
+
+}
+
+.camera {
+
+}
+
+.stop {
+  background-color: red;
+  color: #fff;
+}
+
+.dragBlock {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  font-size: 0;
+  z-index: 20;
+  box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06);
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.ownStream {
+  height: 100px;
+  width: 180px;
+}
+
+.remote {
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.connecting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "English",
+      "original_name": "English",
+      "code": "en"
+    },
+    {
+      "id": 2,
+      "name": "Russian",
+      "original_name": "Russian",
+      "code": "ru"
+    },
+    {
+      "id": 3,
+      "name": "German",
+      "original_name": "German",
+      "code": "de"
+    }
+  ]
+}

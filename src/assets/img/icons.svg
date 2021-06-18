@@ -1,0 +1,117 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  style="position:absolute;visibility:hidden;height:0;pointer-events:none;z-index:-1;"
+>
+  <symbol id="icon-notification" width="18" height="22" fill="none" viewBox="0 0 18 22">
+    <path stroke="currentColor" d="M10.353 1.183A5.257 5.257 0 009 1C5.903 1 2.892 3.984 2.892 6.392v4.076C2.892 11.93 1 12.613 1 14.678v1.032C1 17 2.204 17 2.376 17h13.248C15.796 17 17 17 17 15.71v-1.033c0-2.064-1.893-2.747-1.893-4.21v-1.7"/>
+    <circle cx="14" cy="4" r="4" fill="#20C2D2"/>
+    <path stroke="currentColor" d="M6 19c.48 1.173 1.642 2 3 2s2.52-.827 3-2"/>
+  </symbol>
+  <symbol id="icon-notification-empty" width="18" height="22" fill="none" viewBox="0 0 18 22">
+    <path d="M6 19C6.47993 20.1727 7.64229 21 9 21C10.3577 21 11.5201 20.1727 12 19" stroke="#BDBDBD"/>
+    <path d="M2.89247 6.39245C2.89247 3.98385 5.90323 1 9 1C12.0968 1 15.1075 3.98385 15.1075 6.39245L15.1075 10.4677C15.1075 11.9301 17 12.6129 17 14.6774V15.7097C17 17 15.7957 17 15.6237 17H2.37634C2.2043 17 1 17 1 15.7097V14.6774C1 12.6129 2.89247 11.9301 2.89247 10.4677V6.39245Z" stroke="#BDBDBD"/>
+  </symbol>
+  <symbol id="icon-pin" width="13" height="20" viewBox="0 0 13 20">
+    <g fill="currentColor">
+      <path fill="currentColor" fill-rule="evenodd" d="M12.989 6.85a6.5 6.5 0 10-12.98.01A1.86 1.86 0 000 7.054C0 11.123 6.5 20 6.5 20S13 11.123 13 7.053c0-.07-.004-.136-.011-.203zM6.5 10a3.5 3.5 0 100-7 3.5 3.5 0 000 7z" clip-rule="evenodd"/>
+    </g>
+  </symbol>
+  <symbol id="icon-refresh" width="27" height="22" viewBox="0 0 27 22">
+    <path stroke="currentColor" stroke-linecap="round" fill="none" stroke-width="1.2" d="M3.2 13c.927 4.564 4.962 8 9.8 8 4.838 0 8.873-3.436 9.8-8M23.201 9c-.926-4.564-4.962-8-9.8-8-4.837 0-8.873 3.436-9.8 8"/>
+    <path stroke="currentColor" stroke-linecap="round" fill="none" stroke-linejoin="round" stroke-width="1.2" d="M19.9 14.246l3.102-1.696 1.696 3.103M6.501 7.754L3.4 9.45 1.703 6.347"/>
+  </symbol>
+  <symbol id="icon-info" width="20" height="20" viewBox="0 0 20 20">
+    <circle cx="10" cy="10" r="10" fill="#F8F9FA"/>
+    <path fill="#989FA3" d="M10.972 11.652V6H8.956v5.652h2.016zm.168 1.824c0-.624-.528-1.128-1.176-1.128-.648 0-1.164.516-1.164 1.14 0 .636.54 1.128 1.164 1.128.648 0 1.176-.504 1.176-1.14z"/>
+  </symbol>
+  <symbol id="icon-logout" width="21" fill="none" height="20" viewBox="0 0 21 20">
+    <path fill="#1B1D1E" d="M9.143 9.5a.5.5 0 000 1v-1zm11.21.854a.5.5 0 000-.708l-3.181-3.182a.5.5 0 10-.708.708L19.293 10l-2.829 2.828a.5.5 0 00.708.708l3.181-3.182zm-11.21.146H20v-1H9.143v1z"/><path stroke="#1B1D1E" stroke-linecap="round" d="M12.762 5.714V4a3 3 0 00-3-3H4a3 3 0 00-3 3v12a3 3 0 003 3h5.762a3 3 0 003-3v-1.714"/>
+  </symbol>
+  <symbol id="icon-home" width="17" height="16" viewBox="0 0 17 16">
+    <path fill="currentColor" d="M14.201 15.811H3.134a1.499 1.499 0 01-1.497-1.497V6.436a.52.52 0 111.042 0v7.878c0 .251.204.455.455.455h11.067a.456.456 0 00.456-.455V6.436a.52.52 0 111.041 0v7.878c0 .825-.671 1.497-1.497 1.497z"/><path fill="currentColor" d="M16.48 8.259a.52.52 0 01-.37-.153L9.635 1.63a1.369 1.369 0 00-1.933 0L1.224 8.106a.52.52 0 11-.736-.736L6.964.893c.94-.94 2.467-.94 3.406 0l6.477 6.477a.52.52 0 01-.368.889zM10.75 15.81H6.585a.52.52 0 01-.52-.52v-4.622c0-.897.73-1.627 1.627-1.627h1.953c.897 0 1.627.73 1.627 1.627v4.622a.52.52 0 01-.52.52zm-3.645-1.04h3.125v-4.102a.587.587 0 00-.586-.586H7.69a.587.587 0 00-.586.586v4.101z"/>
+  </symbol>
+  <symbol id="icon-phone-outline" width="17" height="16" viewBox="0 0 17 16">
+     <path stroke="currentColor" fill="none" stroke-width="1.2" d="M15.78 12.908c-.846 1.902-2.83 2.235-3.477 2.235-.19 0-3.154.147-7.415-3.643C1.459 8.45 1.04 5.17 1.004 4.547c-.036-.607.15-2.13 2.383-3.26.277-.14.826-.203.967-.07.063.059 1.938 2.952 1.987 3.048.05.096.074.19.074.282 0 .132-.1.298-.301.496-.2.198-.42.38-.655.545-.236.165-.455.34-.656.525-.2.185-.3.337-.3.456.013.309.282 1.414 2.336 3.106 2.055 1.693 3.044 2.17 3.14 2.203.095.033.174.05.237.05.127 0 .29-.095.487-.283.197-.188.86-1.04 1.071-1.23.212-.187.388-.281.529-.281.098 0 .199.023.3.069.103.046 3.192 1.741 3.251 1.798.16.154.047.635-.074.907"/>
+  </symbol>
+  <symbol id="icon-video" width="12" height="8" viewBox="0 0 12 8">
+    <path stroke="currentColor" fill="none" stroke-linejoin="round" stroke-width=".8" d="M8.327 5v1.594c0 .5-.459.906-1.025.906H1.525C.96 7.5.5 7.094.5 6.594V1.406C.5.906.959.5 1.525.5h5.777c.566 0 1.025.406 1.025.906V3m0 2L11.5 6V2L8.327 3m0 2V3M6 4a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+  </symbol>
+  <symbol id="icon-check" width="28" height="28" fill="none" viewBox="0 0 28 28">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.027 13l3 3 8-8s-2.5-4-8-4c-5.805 0-10.425 5.21-10 11 .394 5.372 4.615 9.369 10 9.5 5.528.134 10.473-3.372 10.473-9.5 0-.438-.129-1.688-.473-2.5"/>
+  </symbol>
+  <symbol id="icon-globe" width="18" height="18" fill="none" viewBox="0 0 18 18">
+    <path stroke="currentColor" stroke-width="2.667" d="M9 16A7 7 0 109 2a7 7 0 000 14z" clip-rule="evenodd"/><path stroke="currentColor" d="M5 4s2 2 4 2 4-2 4-2M5 14s2-2 4-2 4 2 4 2"/>
+    <path stroke="currentColor" stroke-linecap="square" d="M3 9h12"/>
+  </symbol>
+  <symbol id="icon-pen" width="14" height="14" fill="none" viewBox="0 0 14 14">
+    <g fill="currentColor"><path d="M4.06 10.52l6.169-6.17 1.45 1.45-6.17 6.17-1.45-1.45zM.794 11.553L0 14l2.447-.794-1.653-1.653zM2.03 8.489l6.169-6.17 1.45 1.45-6.17 6.17-1.45-1.45zM8.78 1.74L10.52 0 14 3.48l-1.74 1.74-3.48-3.48zM1.563 9.182l-.485 1.495 2.245 2.245 1.496-.485-3.256-3.255z"/></g>
+  </symbol>
+  <symbol id="icon-close-eye" width="18" height="12" fill="none" viewBox="0 0 18 12">
+    <g stroke="currentColor" clip-rule="evenodd" opacity=".4">
+    <path d="M9 1c4 0 8 5 8 5s-4 5-8 5-8-5-8-5 4-5 8-5z"/><path d="M9 9a3 3 0 100-6 3 3 0 000 6z"/></g>
+  </symbol>
+  <symbol id="icon-open-eye" width="20" height="12" fill="none" viewBox="0 0 20 12">
+   <path stroke="currentColor" stroke-width="2" d="M10 1c4 0 8 5 8 5s-4 5-8 5-8-5-8-5 4-5 8-5z" clip-rule="evenodd"/>
+   <path stroke="currentColor" d="M10 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="icon-plus" width="18" height="18" fill="none" iewBox="0 0 18 18">
+    <path fill="currentColor" d="M10.059 0H7.94v7.941H0v2.118h7.941V18h2.118v-7.941H18V7.94h-7.941V0z"/>
+  </symbol>
+  <symbol id="icon-phone" width="16" height="15" fill="none" viewBox="0 0 16 15">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8359 12.6046C14.9295 14.6421 12.8046 14.9992 12.1102 14.9992C11.9063 14.9992 8.73062 15.1571 4.16565 11.0965C0.491883 7.82868 0.0429948 4.31461 0.00388377 3.64694C-0.0341606 2.99661 0.164417 1.36519 2.55766 0.153047C2.85419 0.00284231 3.4421 -0.0636747 3.59392 0.078695C3.6613 0.141878 5.67001 3.2415 5.72281 3.3442C5.77561 3.44672 5.8021 3.54775 5.8021 3.64677C5.8021 3.78831 5.69454 3.96536 5.47925 4.17774C5.26414 4.39013 5.03019 4.58485 4.77721 4.76173C4.52423 4.93877 4.29028 5.12632 4.07499 5.32454C3.85988 5.52259 3.75232 5.68563 3.75232 5.81299C3.7669 6.14358 4.05579 7.32772 6.25649 9.14101C8.45756 10.9548 9.51782 11.4658 9.61969 11.5011C9.72173 11.5365 9.80653 11.554 9.87444 11.554C10.0104 11.554 10.1841 11.4533 10.3955 11.2516C10.6067 11.0497 11.3173 10.1364 11.5438 9.93455C11.7703 9.733 11.9591 9.63214 12.1102 9.63214C12.2158 9.63214 12.3233 9.65681 12.4327 9.70632C12.5422 9.75584 15.8519 11.572 15.9151 11.6327C16.0869 11.7977 15.9656 12.3128 15.8359 12.6046Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-facebook" width="33" height="32" fill="none" viewBox="0 0 33 32">
+    <path fill="currentColor" d="M32.001 16c0-8.836-7.163-16-16-16S0 7.164 0 16c0 7.987 5.851 14.607 13.5 15.807V20.626H9.439V16H13.5v-3.526c0-4.01 2.388-6.225 6.043-6.225 1.75 0 3.582.313 3.582.313V10.5h-2.018c-1.987 0-2.607 1.234-2.607 2.5v3h4.437l-.709 4.626h-3.728v11.18c7.65-1.2 13.5-7.82 13.5-15.805z"/>
+  </symbol>
+  <symbol id="icon-linkedIn" width="27" height="27" fill="none" viewBox="0 0 27 27">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0444 0H2.03529C0.934714 0 0 0.870429 0 1.94271V25.056C0 26.1296 0.613286 27 1.71386 27H24.723C25.8249 27 27 26.1296 27 25.056V1.94271C27 0.870429 26.1463 0 25.0444 0ZM10.2857 10.2857H13.9204V12.1384H13.9603C14.5144 11.1394 16.1511 10.125 18.1749 10.125C22.059 10.125 23.1429 12.1873 23.1429 16.0071V23.1429H19.2857V16.7104C19.2857 15.0004 18.603 13.5 17.0061 13.5C15.0673 13.5 14.1429 14.8127 14.1429 16.9676V23.1429H10.2857V10.2857ZM3.85714 23.1429H7.71429V10.2857H3.85714V23.1429ZM8.19643 5.78571C8.19643 7.11771 7.11771 8.19643 5.78571 8.19643C4.45371 8.19643 3.375 7.11771 3.375 5.78571C3.375 4.45371 4.45371 3.375 5.78571 3.375C7.11771 3.375 8.19643 4.45371 8.19643 5.78571Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-arrow-down" width="18" height="18" fill="none" viewBox="0 0 18 18">
+    <path stroke="currentColor" d="M2.5 7L9 11.5 15.5 7"/>
+  </symbol>
+  <symbol id="icon-calendar" width="18" height="18" fill="none" viewBox="0 0 18 18">
+    <path stroke="currentColor" stroke-width="2" d="M1 6a3 3 0 013-3h10a3 3 0 013 3v8a3 3 0 01-3 3H4a3 3 0 01-3-3V6z" clip-rule="evenodd"/><path fill="currentColor" d="M6 1h.5V.5H6V1zm0 4v.5h.5V5H6zM5 5h-.5v.5H5V5zm0-4V.5h-.5V1H5zM2 7v-.5h-.5V7H2zm14 0h.5v-.5H16V7zm0 1v.5h.5V8H16zM2 8h-.5v.5H2V8zm11-7h.5V.5H13V1zm-1 0V.5h-.5V1h.5zm0 4h-.5v.5h.5V5zm1 0v.5h.5V5H13zM6.5 1.5V1h-1v.5h1zm0 3v-3h-1v3h1zm0 .5v-.5h-1V5h1zM5 5.5h1v-1H5v1zm-.5-1V5h1v-.5h-1zm0-3v3h1v-3h-1zm0-.5v.5h1V1h-1zM6 .5H5v1h1v-1zm-3.5 6H2v1h.5v-1zm13 0h-13v1h13v-1zm.5 0h-.5v1h.5v-1zm.5 1.5V7h-1v1h1zm-1 .5h.5v-1h-.5v1zm-13 0h13v-1h-13v1zm-.5 0h.5v-1H2v1zM1.5 7v1h1V7h-1zm11-6v.5h1V1h-1zm-.5.5h1v-1h-1v1zm.5 0V1h-1v.5h1zm0 3v-3h-1v3h1zm0 .5v-.5h-1V5h1zm.5-.5h-1v1h1v-1zm-.5 0V5h1v-.5h-1zm0-3v3h1v-3h-1z"/>
+  </symbol>
+
+  <symbol id="icon-close" width="10" height="9" viewBox="0 0 10 9">
+    <path fill="currentColor" fill-rule="evenodd" d="M4.5 5.207l3.794 3.794.707-.707L5.208 4.5 9 .707 8.294 0 4.501 3.793.707 0 0 .707 3.794 4.5 0 8.294.707 9l3.794-3.794z" clip-rule="evenodd"/>
+  </symbol>
+
+  <symbol id="icon-letter" width="18" height="14" fill="none" viewBox="0 0 18 14">
+    <path fill="currentColor" d="M16.418.145H1.582c-.243 0-.471.06-.678.158l8.06 8.06 1.807-1.736L17.097.303a1.564 1.564 0 00-.678-.158zM17.842 1.049l-5.951 5.95 5.95 5.952c.1-.206.16-.434.16-.678V1.726c0-.243-.06-.471-.159-.677zM.159 1.049A1.564 1.564 0 000 1.727v10.547c0 .243.06.47.158.677L6.11 7 .159 1.049z"/><path fill="currentColor" d="M11.143 7.746L9.336 9.482a.526.526 0 01-.746 0L6.854 7.746l-5.952 5.95c.207.1.435.16.678.16h14.836c.244 0 .472-.06.678-.16l-5.951-5.95z"/>
+  </symbol>
+
+  <symbol id="icon-open-btn" width="11" height="10" viewBox="0 0 11 10" fill="none">
+    <path d="M7 1L9 5L7 9" stroke="#20C2D2" stroke-width="2"/>
+    <path d="M1 1L3 5L1 9" stroke="#20C2D2" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="icon-next" width="17" height="17" fill="none" viewBox="0 0 17 17">
+    <path fill="currentColor" d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path>
+  </symbol>
+
+  <symbol id="icon-prev" width="17" height="17" fill="none" viewBox="0 0 17 17">
+    <path fill="currentColor" d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path>
+  </symbol>
+
+  <symbol id="icon-bookmark" width="14" height="14" fill="none" viewBox="0 0 14 14">
+    <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" clip-path="url(#clip0)"><path d="M6.722 11.114l-4.338 2.14c-.346.163-.773.048-.963-.258a.634.634 0 01-.088-.308V3.2c0-1.81 1.373-2.533 3.348-2.533H9.32c1.914 0 3.347.675 3.347 2.412v9.609a.615.615 0 01-.21.456.758.758 0 01-.507.19.861.861 0 01-.348-.08l-4.364-2.14a.595.595 0 00-.516 0z" clip-rule="evenodd"/><path d="M4.667 5.333h4.667"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h14v14H0z"/></clipPath></defs>
+  </symbol>
+
+  <symbol id="icon-header-bookmark" width="21" height="21" viewBox="0 0 21 21" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0833 16.6705L3.57649 19.8824C3.05698 20.1257 2.41694 19.9534 2.13054 19.4933C2.04768 19.3508 2.00297 19.1928 2 19.0319V4.8C2 2.08571 4.05848 1 7.02067 1H13.9793C16.8512 1 19 2.01333 19 4.61905V19.0319C19 19.2887 18.8868 19.5349 18.6853 19.7165C18.4838 19.898 18.2105 20 17.9256 20C17.7438 19.9974 17.5652 19.9572 17.4034 19.8824L10.8565 16.6705C10.6152 16.553 10.3245 16.553 10.0833 16.6705Z" stroke="#200E32" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 8H14" stroke="#200E32" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-document" width="14" height="14" fill="none" viewBox="0 0 14 14">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.625 9.917h-5.25M9.625 7h-5.25M6.417 4.083H4.375"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.544.875L4.431.878C2.595.889 1.458 2.098 1.458 3.94v6.12c0 1.852 1.146 3.065 2.997 3.065l5.114-.002c1.836-.011 2.973-1.22 2.973-3.063V3.94c0-1.852-1.146-3.065-2.998-3.065z" clip-rule="evenodd"/>
+  </symbol>
+
+  <symbol id="icon-delete" width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <path d="M3.3335 5.83337H16.6668" stroke="#1B1D1E" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.3335 9.16663V14.1666" stroke="#1B1D1E" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11.6665 9.16663V14.1666" stroke="#1B1D1E" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4.1665 5.83337L4.99984 15.8334C4.99984 16.2754 5.17543 16.6993 5.48799 17.0119C5.80055 17.3244 6.22448 17.5 6.6665 17.5H13.3332C13.7752 17.5 14.1991 17.3244 14.5117 17.0119C14.8242 16.6993 14.9998 16.2754 14.9998 15.8334L15.8332 5.83337" stroke="#1B1D1E" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7.5 5.83333V3.33333C7.5 3.11232 7.5878 2.90036 7.74408 2.74408C7.90036 2.5878 8.11232 2.5 8.33333 2.5H11.6667C11.8877 2.5 12.0996 2.5878 12.2559 2.74408C12.4122 2.90036 12.5 3.11232 12.5 3.33333V5.83333" stroke="#1B1D1E" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>

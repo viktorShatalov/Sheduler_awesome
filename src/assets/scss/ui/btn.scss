@@ -1,0 +1,143 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/colors.scss';
+
+.esq-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  font-weight: bold;
+  color: $white;
+
+  @include media(">tiny") {
+    height: 60px;
+    font-size: 18px;
+    border-radius: 30px;
+    padding: 10px 40px 8px;
+    min-width: 200px;
+  }
+
+  @include media("<=tiny") {
+    height: 50px;
+    font-size: 16px;
+    border-radius: 25px;
+    padding: 10px 20px 8px;
+    width: 100%;
+    // max-width: 300px;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    filter: grayscale(.5);
+  }
+
+  & > * {
+    position: relative;
+  }
+
+  svg {
+    margin-top: -2px;
+  }
+
+  svg + span {
+    margin-left: 8px;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: $primary;
+    z-index: 0;
+    transition: filter .3s, opacity .3s;
+  }
+
+  &:not(.esq-btn--outline):hover {
+    &:before {
+      filter: brightness(90%);
+    }
+  }
+
+  &.esq-brand {
+    color: $text;
+
+    &:before {
+      background-color: $brand;
+    }
+  }
+
+  &.esq-utility {
+    color: $text;
+
+    &:before {
+      background-color: $utility;
+    }
+  }
+
+  &--outline {
+    color: $primary;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $primary;
+    transition: color .3s;
+
+    &:before {
+      opacity: 0;
+    }
+
+    &:hover {
+      color: $white !important;
+
+      &:before {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+      }
+    }
+
+    &.esq-blue {
+      color: $blue;
+      border-color: $blue;
+
+      &:before {
+        background-color: $blue;
+      }
+    }
+
+    &.esq-cerul {
+      color: $cerul;
+      border-color: $cerul;
+
+      &:before {
+        background-color: $cerul;
+      }
+    }
+
+    &.esq-brand {
+      color: $text;
+      border-color: $brand;
+
+      &:before {
+        background-color: $brand;
+      }
+    }
+
+    &.esq-border {
+      color: $text;
+      border-color: $border;
+
+      &:before {
+        background-color: $border;
+      }
+
+      &:hover {
+        color: $text !important;
+      }
+    }
+  }
+}

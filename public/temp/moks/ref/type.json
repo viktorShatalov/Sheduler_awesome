@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Video call",
+      "code": null,
+      "group": "schedule"
+    },
+    {
+      "id": 2,
+      "name": "Phone call",
+      "code": null,
+      "group": "schedule"
+    },
+    {
+      "id": 3,
+      "name": "Live meeting",
+      "code": null,
+      "group": "schedule"
+    }
+  ]
+}

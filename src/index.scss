@@ -1,0 +1,141 @@
+@import "./assets/scss/general/mixins";
+@import "./assets/scss/framework/scss-variables";
+@import "./assets/scss/framework/css-variables";
+
+@import "./assets/scss/reset";
+
+@import "./assets/scss/transitions";
+@import "./assets/scss/typography";
+@import "./assets/scss/ui/btn.scss";
+
+.esq-wrap {
+  max-width: $wrap;
+  margin: 0 auto;
+
+  @include media(">tiny") {
+    padding: 0 $gapDesktop;
+  }
+
+  @include media("<=tiny") {
+    padding: 0 $gapMobile;
+  }
+}
+
+.esq-main {
+  @include media(">tiny") {
+    min-height: calc(100vh - #{$headerDesk});
+  }
+
+  @include media("<=tiny") {
+    min-height: calc(100vh - #{$headerMob});
+  }
+
+  &.esq-white-bg {
+    background-color: $white;
+  }
+
+  &.show-blur {
+    position: relative;
+    z-index: 12;
+  }
+}
+
+.esq-flex {
+  display: flex;
+
+  .esq-justify-center {
+    justify-content: center;
+  }
+
+  .esq-align-center {
+    align-items: center;
+  }
+}
+
+.esq-hr {
+  margin: 0;
+  border-color: $border;
+}
+
+.esq-app {
+  min-height: 100vh;
+  background-color: $utility;
+
+  // @include media(">tiny") {
+  //   padding-top: $headerDesk;
+  // }
+  // @include media("<=tiny") {
+  //   padding-top: $headerMob;
+  // }
+}
+.book__online_vidget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  background-color: $brand;
+  color: $text;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px,
+    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px !important;
+  width: 100%;
+  max-width: 175px;
+  padding: 10px 0;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 12;
+  &__body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    background-color: $white;
+    width: 100%;
+    max-width: 60vw;
+    padding: 30px 20px;
+    position: relative;
+    border-radius: 2px;
+  }
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+    &::after,
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: $text;
+      position: absolute;
+      display: block;
+      top: 9px;
+      left: 0;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+}

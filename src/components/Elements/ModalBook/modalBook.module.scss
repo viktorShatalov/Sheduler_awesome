@@ -1,0 +1,8 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.modalBook {
+  @include media(">tiny") {
+    min-width: 600px;
+  }
+}

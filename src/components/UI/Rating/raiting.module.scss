@@ -1,0 +1,11 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.container {
+  display: inline-block;
+
+  & > * {
+    position: relative;
+    z-index: 0;
+  }
+}

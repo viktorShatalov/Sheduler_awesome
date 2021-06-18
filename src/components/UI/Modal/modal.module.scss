@@ -1,0 +1,27 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.modal {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  z-index: 1;
+
+  @include media(">tiny") {
+    right: -30px;
+    top: -30px;
+    color: #FFFFFF;
+  }
+
+  @include media("<=tiny") {
+    right: $gapMobile;
+    top: $gapMobile;
+    color: $text;
+  }
+
+  svg {
+    font-size: 32px;
+  }
+}

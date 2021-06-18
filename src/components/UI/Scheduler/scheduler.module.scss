@@ -1,0 +1,358 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.container {
+  position: relative;
+  // height: 100%;
+  // width: 100%;
+  background: #FFFFFF;
+
+  overflow: hidden;
+
+  @include media(">large") {
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06);
+  }
+
+  @include media(">tiny","<=large") {
+    border-radius: 10px;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.02);
+  }
+
+  * {
+    font-family: inherit;
+  }
+}
+
+.container_wrapper {
+  display: flex;
+
+  @include media('<medium') {
+    flex-direction: column;
+  }
+
+  .container {
+    flex: 1;
+  }
+}
+
+.newEvent {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #FDDC03;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0px 6px 10px rgba(253, 220, 3, 0.3);
+  transition: all .3s;
+  
+  @include media(">#{$wrap + 80px}") {
+    right: calc(50% - #{$wrap} / 2 + 40px);
+  }
+
+  @include media(">tiny","<=#{$wrap + 80px}") {
+    right: 40px;
+  }
+
+  @include media(">tiny") {
+    bottom: 80px;
+  }
+
+  @include media("<=tiny") {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  :global(.iOS) & {
+    @include media("<=tiny") {
+      bottom: 80px;
+    }
+  }
+
+  &:hover {
+   filter: brightness(105%);
+
+    &:after {
+      opacity: 0.55;
+      visibility: visible;
+    }
+  }
+
+  &:after {
+    background: #000;
+    border-radius: 2px;
+    color: #FFF;
+    content: attr(data-tooltip);
+    margin: 0 0 0 -110px;
+    opacity: 0;
+    padding: 4px 9px;
+    position: absolute;
+    visibility: visible;
+    font-family: "Roboto";
+    font-size: 14px;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+  }
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 15;
+  display: none;
+
+  @include media(">tiny") {
+    top: calc(50% - 300px) !important;
+    left: calc(50% - 382px) !important;
+
+    // transform: translate3d(calc(-50% + 0.1px), calc(-50% + 0.1px), 0);
+  }
+
+  @include media("<small", ">tiny") {
+    left: 0 !important;
+    width: 100%;
+    max-width: calc(100% - 60px);
+    margin-left: 30px;
+  }
+
+  @include media("<=tiny") {
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100vw;
+    height: 100vh;
+    // overflow: auto;
+  }
+}
+
+.legend {
+  background: #FFFFFF;
+
+  @include media(">large") {
+    display: none;
+    // border-radius: 20px;
+  }
+
+  @include media(">tiny", "<=large") {
+    border-radius: 10px;
+  }
+
+  @include media(">tiny") {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06);
+  }
+
+  @include media("<=tiny") {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    margin-top: 12px;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.01);
+  }
+}
+
+.legendList {
+  padding: 8px 0;
+
+  @include media(">tiny") {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 60px;
+    margin: 0 -25px;
+    width: auto;
+  }
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+
+  // &:not(:first-child) {
+    // margin-left: 50px;
+  // }
+  @include media(">tiny") {
+    padding: 8px 25px;
+  }
+
+  @include media("<=tiny") {
+    padding: 8px 12px;
+  }
+}
+
+.legendColor {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  border-radius: 5px;
+  border: 1px solid #F8F9FA;
+}
+
+.legendLabel {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.externalCalendar {
+  align-self: baseline;
+  position: sticky;
+  top: 20px;
+  width: 60px;
+  height: 334px;
+  margin-right: 20px;
+  z-index: 4;
+  transition: width 0.2s ease;
+
+  @include media('<medium') {
+    width: 310px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  @include media("<=tiny") {
+    margin: 10px 0;
+  }
+
+  &[class*="open"] {
+    @include media('>large') {
+      width: 310px;
+    }
+    
+    .inner {
+      width: 310px;
+
+      @include media('<medium') {
+        height: 334px;
+      }
+    }
+
+    & .btn {
+      right: -267px;
+
+      @include media('>large') {
+        right: -17px;
+      }
+
+      @include media('<medium') {
+        right: -17px;
+      }
+
+      & > svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    & .text {
+      opacity: 0;
+    }
+
+    & .calendarContainer {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    & .calendarLegend {
+      width: 310px;
+      opacity: 1;
+    }
+  }
+
+  .inner {
+    width: 60px;
+    height: 334px;
+    background-color: $white;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    transition: width 0.2s ease;
+    overflow: hidden;
+
+    @include media('<medium') {
+      width: 310px;
+      height: 60px;
+    }
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 13px;
+    top: 29px;
+    width: 34px;
+    height: 34px;
+    background-color: $white;
+    border: 1px solid $primary;
+    border-radius: 17px;
+    transition: right 0.2s ease;
+    z-index: 2;
+
+    @include media('<medium') {
+      top: 14px;
+      transform: rotate(90deg);
+    }
+
+    & > svg {
+      transition: transform 0.2s ease;
+    }
+  }
+
+  .text {
+    position: absolute;
+    bottom: 96px;
+    left: -8px;
+    color: $info;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    transform: rotate(-90deg);
+    transition: opacity 0.2s ease;
+
+    @include media('<medium') {
+      bottom: 17px;
+      left: 20px;
+      transform: none;
+    }
+  }
+
+  .calendarContainer {
+    position: relative;
+    width: 300px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .calendarLegend {
+    position: absolute;
+    top: 354px;
+    left: 0;
+    width: 0;
+    height: 192px;
+    background-color: $white;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+
+    @include media('<=large') {
+      display: none;
+    }
+
+    & > .legendList {
+      width: 344px;
+      padding: 20px 0 20px 20px
+    }
+  }
+}
+

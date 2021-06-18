@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": 1,
+    "first_name": "user",
+    "last_name": "example",
+    "email": "user@example.com",
+    "phone": "+71111111111",
+    "avatar": "/temp/avatars/1.jpg",
+    "birthday": "1987-06-30T00:00:00.000000Z",
+    "city": "city",
+    "address": "address",
+    "zip": "12345",
+    "gender": {
+      "id": 2,
+      "name": "Female"
+    }
+  }
+}

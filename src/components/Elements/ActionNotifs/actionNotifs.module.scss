@@ -1,0 +1,56 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.wrap {
+  position: sticky;
+  right: 20px;
+  top: 20px;
+  height: 0;
+  margin: 20px 0 -20px;
+  float: right;
+  z-index: 100;
+}
+
+.list {
+  & > li {
+    display: flex;
+    max-width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.notif {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 42px;
+  margin-left: auto;
+  padding: 0 30px 0 15px;
+  font-weight: 500;
+  background-color: $success;
+  border-radius: 10px;
+  box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06);
+
+  &[class*="error"] {
+    color: $white;
+    background-color: $error;
+  }
+
+  & > span {
+    white-space: nowrap;
+
+    @include media('<=tiny') {
+      font-size: 14px;
+    }
+  }
+
+  & > svg {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    cursor: pointer;
+  }
+}

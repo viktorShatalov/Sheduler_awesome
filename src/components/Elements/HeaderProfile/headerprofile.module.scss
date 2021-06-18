@@ -1,0 +1,140 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.header {
+  // display: flex;
+  overflow: auto;
+
+  @include media(">tiny") {
+    margin-bottom: 40px;
+  }
+
+  @include media("<=tiny") {
+    margin-bottom: 24px;
+  }
+
+  &_avatar {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @include media(">tiny") {
+      height: 150px;
+      width: 150px;
+    }
+
+    @include media("<=tiny") {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  &_avatarWrap {
+    float: left;
+    font-size: 0;
+
+    @include media(">tiny") {
+      padding-right: 50px;
+    }
+
+    @include media("<=tiny") {
+      padding-right: 10px;
+    }
+  }
+
+  &_note {
+
+  }
+
+  &_name {
+    font-weight: 700;
+
+    @include media(">tiny") {
+      font-size: 40px;
+    }
+
+    @include media("<=tiny") {
+      font-size: 18px;
+    }
+  }
+
+  &_city {
+    margin-bottom: 12px;
+
+    @include media("<=tiny") {
+      font-size: 12px;
+    }
+  }
+
+  &_contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & > span {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+
+      @include media("<=tiny") {
+        font-size: 12px;
+      }
+
+      &:not(:last-child) {
+        @include media(">tiny") {
+          margin-right: 50px;
+        }
+        @include media("<=tiny") {
+          margin-right: 24px;
+        }
+      }
+
+      svg {
+        flex: none;
+
+        @include media(">tiny") {
+          margin-right: 8px;
+        }
+
+        @include media("<=tiny") {
+          margin-right: 4px;
+          font-size: 14px;
+        }
+      }
+
+      & + * {
+        white-space: break-spaces;
+      }
+    }
+  }
+
+  &_row {
+    display: flex;
+    align-items: center;
+
+    & > .header_favorite {
+      margin-left: 20px;
+    }
+  }
+}
+
+.userName {
+  @include media(">tiny") {
+    padding-top: 36px;
+  }
+
+  @include media("<=tiny") {
+    padding-top: 12px;
+    padding-bottom: 28px;
+  }
+}
+
+.verified {
+  @include media(">tiny") {
+    margin-bottom: 16px;
+  }
+
+  @include media("<=tiny") {
+    margin-bottom: 4px;
+  }
+}

@@ -1,0 +1,138 @@
+.dhx_mini_calendar {
+  padding: 35px 20px !important;
+  font-family: 'Avenir Next LT Pro' !important;
+  background-color: transparent;
+  box-shadow: none !important;
+
+  & > .dhx_year_month {
+    position: relative;
+    padding-top: 0;
+    color: #1B1D1E !important;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+
+    & > .dhx_cal_prev_button {
+      position: relative;
+      top: -3px !important;
+      left: auto !important;
+      right: 35px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDYgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01IDFMMiA3LjcxODc1TDUgMTQuNDM3NSIgc3Ryb2tlPSIjMUIxRDFFIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==");
+
+      &:hover {
+        background-color: transparent;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #20C2D2;
+          border-radius: 5px;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    & > .dhx_cal_next_button {
+      top: -3px !important;
+      left: auto !important;
+      right: -10px !important;
+      width: 25px;
+      height: 25px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDYgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNCA3LjcxODc1TDEgMTQuNDM3NSIgc3Ryb2tlPSIjMUIxRDFFIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==");
+
+      &:hover {
+        background-color: transparent;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #20C2D2;
+          border-radius: 5px;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  & > .dhx_year_grid {
+    margin-top: 25px;
+
+    & > .dhx_year_week {
+
+      & > .dhx_scale_bar {
+        height: 30px !important;
+        color: #707A88;
+        font-size: 10px;
+      }
+    }
+
+    & > .dhx_year_body {
+      & > table {
+        & > tbody {
+          & > tr {
+            & > td {
+
+              &.dhx_before,
+              &.dhx_after {
+                opacity: 0;
+              }
+
+              &.dhx_now {
+                & > .dhx_month_head {
+                  font-weight: bold;
+                  background-color: #FDDC03 !important;//rgba(253, 220, 3, 0.5) !important;
+                  border-radius: 10px;
+
+                  &.dhx_calendar_click,
+                  &.undefined {
+                    &:not(.dxh_year_event) {
+                      background-color: #FDDC03 !important;
+                    }
+                  }
+                }
+              }
+
+              & > .dhx_month_head {
+                color: #1B1D1E !important;
+                font-size: 12px;
+                line-height: 22px;
+
+                &.dhx_calendar_click,
+                &.undefined {
+                  // background-color: #FDDC03 !important;
+                  
+                  [data-period="week"] &,
+                  [data-period="day"] & {
+                    font-weight: bold;
+                    background-color: #EBEEEE !important;
+                    border-radius: 10px;
+                  }
+
+                  [data-period="month"] & {
+                    background-color: transparent !important;
+                  }
+                }
+
+                &.dhx_year_event {
+                  background-color: transparent;
+                }
+              }
+
+              & > .dhx_month_body {
+                border-color: transparent !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #FFFFFF;
+
+  @include media(">tiny") {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    min-height: calc(100vh - #{$headerDesk});
+  }
+
+  @include media("<=tiny") {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: calc(100vh - #{$headerMob});
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.logo {
+  margin-bottom: 28px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media(">small") {
+    padding: 80px 128px 60px;
+  }
+
+  @include media(">tiny","<=small") {
+    padding: 40px;
+  }
+
+  @include media(">tiny") {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    margin: 0 auto;
+    min-height: 420px;
+  }
+
+  @include media("<=tiny") {
+    height: 100%;
+  }
+}
+
+.title {
+
+  text-align: center;
+
+  @include media(">tiny") {
+    padding-bottom: 4px;
+  }
+
+  @include media("<=tiny") {
+    padding-bottom: 12px;
+  }
+}
+
+.subTitle {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @include media(">tiny") {
+    padding-top: 48px;
+  }
+
+  @include media("<=tiny") {
+    padding-top: 20px;
+  }
+}
+
+.input {
+  @include media(">tiny") {
+    margin-bottom: 28px;
+  }
+
+  @include media("<=tiny") {
+    margin-bottom: 20px;
+  }
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.submit {
+  @include media(">tiny") {
+    padding-top: 30px;
+  }
+
+  @include media("<=tiny") {
+    padding-top: 10px;
+  }
+}
+
+.bottom {
+  @include media(">tiny") {
+    padding-top: 30px;
+  }
+
+  @include media("<=tiny") {
+    padding-top: 40px;
+  }
+
+  p + p {
+    @include media(">tiny") {
+      padding-top: 8px;
+    }
+  
+    @include media("<=tiny") {
+      padding-top: 16px;
+    }
+  }
+
+  a {
+    white-space: nowrap;
+
+    @include media(">tiny") {
+      margin: 0 10px;
+    }
+
+    @include media("<=tiny") {
+      margin: 0 5px;
+    }
+  }
+}
+
+.successfully {
+  @include media(">tiny") {
+    width: 100%;
+    min-width: 400px;
+    max-width: 600px;
+  }
+
+  @include media("<=tiny") {
+
+  }
+
+  .title {
+    padding-bottom: 20px;
+  }
+
+  .subTitle + .subTitle {
+    padding-top: 1.375em;
+  }
+}

@@ -1,0 +1,27 @@
+@import '../colors';
+
+// Media queries breakpoints
+$extratiny:     320px;
+$tiny:          600px;
+$small:         768px;
+$medium:        992px;
+$large:         1200px;
+$extralarge:    1600px;
+
+// Sizes
+$wrap:          1440px;
+$gapDesktop:    20px;
+$gapMobile:     16px;
+
+$headerDesk:    100px;
+$headerMob:     60px;
+
+// settings of "include-media"
+$breakpoints: (
+  extratiny: $extratiny,
+  tiny: $tiny,
+  small: $small,
+  medium: $medium,
+  large: $large,
+  extralarge: $extralarge
+);

@@ -1,0 +1,27 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.header {
+  @include media("height>900px") {
+    padding: 50px;
+  }
+
+  @include media("height<=900px") {
+    padding: 20px;
+  }
+
+  @include media("<=tiny") {
+    padding-right: 40px;
+  }
+}
+
+.list_events {
+  @include media("height>900px") {
+    padding-bottom: 50px;
+  }
+
+  &.fullState {
+    padding-bottom: 10px !important;
+  }
+}
+

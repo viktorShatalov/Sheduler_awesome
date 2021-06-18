@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": 7,
+    "first_name": "example first_name",
+    "middle_name": "example first_name",
+    "last_name": "example last_name",
+    "is_visible": true,
+    "email": "lawyer-example@example.com",
+    "avatar": null,
+    "birthday": "2020-06-30T00:00:00.000000Z"
+  }
+}

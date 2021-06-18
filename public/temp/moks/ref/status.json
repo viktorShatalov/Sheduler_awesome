@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "new",
+      "code": "booking-new",
+      "group": "booking"
+    },
+    {
+      "id": 2,
+      "name": "confirmed",
+      "code": "booking-confirmed",
+      "group": "booking"
+    },
+    {
+      "id": 3,
+      "name": "canceled by the lawyer",
+      "code": "booking-canceled-lawyer",
+      "group": "booking"
+    },
+    {
+      "id": 4,
+      "name": "canceled by the user",
+      "code": "booking-canceled-user",
+      "group": "booking"
+    }
+  ]
+}

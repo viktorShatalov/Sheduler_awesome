@@ -1,0 +1,53 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.header {
+  @include media("height>900px") {
+    padding: 50px;
+  }
+
+  @include media("height<=900px") {
+    padding: 20px;
+  }
+
+  @include media("<=tiny") {
+    padding-right: 40px;
+  }
+}
+
+.content {
+  font-size: 18px;
+  font-weight: bold;
+
+  @include media("height>900px") {
+    padding: 50px 50px 0;
+  }
+
+  @include media("height<=900px") {
+    padding: 20px 20px 0;
+  }
+
+  @include media("<=tiny") {
+    padding-right: 40px 40px 0;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+
+  @include media("height>900px") {
+    padding: 50px;
+  }
+
+  @include media("height<=900px") {
+    padding: 20px;
+  }
+
+  @include media("<=tiny") {
+    padding-right: 40px;
+  }
+}

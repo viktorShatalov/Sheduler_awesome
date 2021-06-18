@@ -1,0 +1,105 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 16px;
+  position: relative;
+}
+
+.label {
+  font-size: 1em;
+}
+
+.input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &:checked + .placeholder i {
+    &:after {
+      transform: rotate(-45deg) scale(1,1);
+    }
+  }
+}
+
+.placeholder {
+  display: flex;
+  color: $text;
+  font-size: 1em;
+  font-weight: 500;
+  user-select: none;
+
+  i {
+    position: relative;
+    flex: none;
+    align-self: flex-start;
+
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      top: calc(50% - .4em);
+      left: calc(50% - .4em);
+      height: .56em;
+      width: .8em;
+      border-bottom: 2px solid $white;
+      border-left: 2px solid $white;
+      transform: rotate(-45deg) scale(0,0);
+      transition: transform .1s ease-in;
+    }
+
+    &::before {
+      height: 1.5em;
+      width: 1.5em;
+      border-radius: 4px;
+      background-color: $primary;
+    }
+  }
+
+  & > span {
+    margin-left: 6px;
+
+    @include media(">tiny") {
+      line-height: 1.8em;
+    }
+
+    @include media("<=tiny") {
+      line-height: 1.25em;
+      font-size: 12px;
+      text-align: initial;
+    }
+  }
+}
+
+.notValid {
+  .placeholder {
+    color: $error;
+  }
+  .input {
+    color: $error;
+  }
+  .label:before {
+    border-top: 2px solid $error;
+  }
+}
+
+.errors {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: $error;
+  font-size: 13px;
+}

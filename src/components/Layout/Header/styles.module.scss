@@ -1,0 +1,396 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.container {
+  // position: fixed;
+  // left: 0;
+  // right: 0;
+  // top: 0;
+  position: relative;
+  background-color: $white;
+  border-bottom: 1px solid #F8F9FA;
+  z-index: 12;
+
+  // &:global(.enable-animation) {
+  //   transition: background-color .4s;
+
+  //   & * {
+  //     transition: color .2s !important;
+  //   }
+  // }
+
+  // &.hidden {
+  //   &,
+  //   & * {
+  //     border: none; 
+  //     background-color: transparent !important;
+  //     color: $white !important;
+  //   }
+
+  //   .logo {
+  //     pointer-events: none;
+  //     opacity: 0;
+  //   }
+  // }
+
+  // &.specific + :global(.esq-main) {
+  //   @include media(">tiny") {
+  //     margin-top: -#{$headerDesk};
+  //   }
+  //   @include media("<=tiny") {
+  //     margin-top: -#{$headerMob};
+  //   }
+  // }
+
+  & > * {
+    height: 100%;
+  }
+
+  @include media(">tiny") {
+    height: $headerDesk;
+  }
+
+  @include media("<=tiny") {
+    height: $headerMob;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  @include media("<=tiny") {
+    align-items: center;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    // left: -$gapMobile;
+    // right: -$gapMobile;
+    bottom: 0;
+    background-color: $white;
+    z-index: -1;
+
+    // :global(.enable-animation) & {
+    //   transition: background-color .4s;
+    // }
+
+    // .hidden & {
+    //   background-color: transparent;
+
+    //   // :global(.enable-animation) & {
+    //     // transition: background-color .1s;
+    //   // }
+    // }
+
+    // :global(.enable-animation).hidden & {
+    //   transition: background-color .1s;
+    // }
+  }
+}
+
+.logo {
+  // align-self: center;
+  font-size: 0;
+  flex: 1;
+
+  a {
+    display: block;
+
+    @include media(">tiny") {
+      width: 120px;
+    }
+  
+    @include media("<=tiny") {
+      width: 90px;
+    }
+  }
+
+  svg {
+    width: 100%;
+  }
+
+}
+
+.burger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  &_wrap {
+    font-size: 0;
+
+    @include media('<=tiny') {
+      margin-left: 10px;
+    }
+    // display: flex;
+    // align-items: center;
+
+    // justify-content: center;
+    // height: 100%;
+  }
+
+  &:after,
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $text;
+    width: 20px;
+    height: 2px;
+    border-radius: 1px;
+
+    transition: all .1s;
+  }
+
+  &:before {
+    left: 5px;
+    top: 15px;
+    // transform-origin: top left;
+  }
+
+  &:after {
+    right: 5px;
+    top: 25px;
+    // transform-origin: bottom left;
+  }
+
+  &.openBurger {
+    &:before,
+    &:after {
+      top: 20px;
+      transition: all .3s;
+    }
+
+    &:before {
+      left: 10px;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      right: 10px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav {
+  @include media("<=tiny") {
+    flex: 1;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:global(.esq-auth) {
+    align-self: normal;
+  }
+
+  &:global(.esq-auth) a:global(.active) {
+    color: $primary;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: $primary;
+    }
+  }
+}
+
+.popup {
+  @include media("<=tiny") {
+    position: absolute;
+    top: $headerMob;
+    left: 0;
+    right: 0;
+    height: calc(100vh - #{$headerMob});
+    background-color: $white;
+    padding: 20px $gapMobile;
+    box-shadow: 0 2px 8px -3px rgba(0, 0, 0, 0.1);
+    z-index: -2;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+}
+
+.navInner {
+  @include media(">tiny") {
+    display: flex;
+    height: 100%;
+  }
+
+  @include media("<=tiny") {
+    text-align: center;
+  }
+}
+
+.navItem {
+  @include media("<=tiny") {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include media(">tiny") {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    margin: 0 -16px;
+    width: auto;
+
+    a {
+      font-weight: 600;
+      transition: all .2s;
+
+      margin: 0 16px;
+    }
+
+    a:hover {
+      filter: none !important;
+      opacity: 0.8;
+    }
+  }
+
+  @include media("<small") {
+    padding: 0 8px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 18px;
+
+    a:not(:global(.esq-auth)) {
+      display: block;
+      padding: 20px 0;
+
+      @include media("<=tiny") {
+        margin: 0 10px;
+      }
+    }
+
+    a:not(:global(.esq-no-auth)):global(.active) {
+      position: relative;
+      color: $primary;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $primary;
+        transition: all .4s;
+      }
+    }
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+
+  align-self: center;
+
+  flex: 1;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+
+  @include media('<small') {
+    margin-left: 10px;
+  }
+  
+  @include media('<=tiny') {
+    margin-left: 0;
+  }
+
+  &_profile {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: none;
+  margin-right: 10px;
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.name {
+  flex: none;
+}
+
+.userName {
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @include media('<medium') {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @include media('<=tiny') {
+    max-width: none;
+  }
+}
+
+.userRole {
+  margin-top: -0.3em;
+  font-size: 12px;
+  color: $info;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+
+  &_wrap {
+    padding-left: 20px;
+
+    @include media('<=tiny') {
+      margin-left: auto;
+    }
+  }
+}

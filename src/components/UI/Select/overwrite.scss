@@ -1,0 +1,48 @@
+.react-dropdown-select-dropdown  {
+  position: absolute;
+  top: 100%;
+  left: -10px !important;
+  right: -10px !important;
+  width: auto  !important;
+  z-index: 2 !important;
+  background: #FFFFFF !important;
+  box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.06) !important;
+  border-radius: 10px !important;
+  border: none !important;
+
+  &.react-dropdown-select-dropdown-position-top {
+    top: initial;
+    bottom: calc(100% - 10px);
+  }
+}
+
+.react-dropdown-select {
+  box-sizing: inherit !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+
+  direction: ltr !important;
+
+  align-items: center !important;
+  cursor: pointer !important;
+  min-height: initial !important;
+  pointer-events:initial !important;
+
+  outline: 0 !important;
+  box-shadow: none !important;
+
+  display: inline-flex !important;
+  flex-direction: column !important;
+  padding-bottom: 8px !important;
+  position: relative !important;
+}
+
+.react-dropdown-select-content {
+  width: 100%;
+}
+
+.react-dropdown-select-dropdown-handle {
+  height: 0;
+}

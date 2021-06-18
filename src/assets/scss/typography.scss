@@ -1,0 +1,132 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+@import './colors.scss';
+
+@import './fonts';
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+input,
+textarea,
+a {
+  font-family: 'Avenir Next LT Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  color: $text;
+}
+
+h1,
+.esq-h1 {
+  font-size: 68px;
+  font-weight: bold;
+  line-height: 1.25em;
+}
+
+h2,
+.esq-h2 {
+  font-weight: bold;
+  line-height: 1.25em;
+
+  @include media(">tiny") {
+    font-size: 36px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 24px;
+  }
+}
+
+.esq-lead {
+  font-size: 22px;
+  line-height: 1.25em;
+}
+
+.esq-big {
+  font-size: 1.1em;
+}
+
+p,
+.esq-reg {
+  font-size: 16px;
+  line-height: 1.375em;
+}
+
+.esq-center {
+  text-align: center;
+}
+
+.esq-small,
+small {
+  font-size: 13px;
+  letter-spacing: .3px;
+}
+
+.esq-bold,
+b {
+  font-weight: bold;
+}
+
+.esq-medium {
+  font-weight: 500;
+}
+
+.esq-semi {
+  font-weight: 600;
+}
+
+.esq-link {
+  color: $primary;
+  cursor: pointer;
+  transition: filter .2s;
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
+
+a.esq-text {
+  transition: filter .2s;
+
+  &:hover {
+    filter: opacity(.7);
+  }
+}
+
+.esq-text {
+  color: $text;
+}
+
+.esq-text-right {
+  text-align: right;
+}
+
+.esq-primary {
+  color: $primary;
+}
+
+.esq-border {
+  color: $border;
+}
+
+.esq-white {
+  color: $white;
+}
+
+.esq-info {
+  color: $info;
+}
+
+.esq-warning {
+  color: $error;
+}
+
+mark,
+.esq-text-hightlight {
+  color: $primary;
+  background-color: transparent;
+}

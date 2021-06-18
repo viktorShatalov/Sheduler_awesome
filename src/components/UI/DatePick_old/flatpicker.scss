@@ -1,0 +1,44 @@
+@import 'assets/scss/general/mixins';
+@import 'assets/scss/framework/scss-variables';
+
+.flatpickr-calendar {
+  @include media("<=tiny") {
+    width: calc(100vw - 40px);
+    max-width: 320px;
+  }
+}
+
+.flatpickr-rContainer,
+.flatpickr-days,
+.dayContainer {
+  @include media("<=tiny") {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month input.cur-year {
+  font-size: 14px;
+}
+
+span.flatpickr-day,
+span.flatpickr-day.prevMonthDay,
+span.flatpickr-day.nextMonthDay {
+  border-radius: 19px !important;
+  border: 2px solid transparent !important;
+
+  &.today {
+    background-color: $primary;
+    color: $white;
+    border: 2px solid transparent !important;
+  }
+
+  &.selected {
+    background-color: $blue;
+    color: $white;
+    font-weight: bold;
+    border: 2px solid transparent !important;
+  }
+}

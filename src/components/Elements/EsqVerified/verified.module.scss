@@ -1,0 +1,27 @@
+@import 'assets/scss/framework/scss-variables';
+@import 'assets/scss/general/mixins';
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  color: $text;
+
+  @include media("<=tiny") {
+    font-size: 10px;
+  }
+
+  svg {
+    height: 1.675em;
+    width: 1.675em;
+
+    @include media(">tiny") {
+      margin-right: 0.5em;
+    }
+
+    @include media("<=tiny") {
+      margin-right: .4em;
+    }
+  }
+}
